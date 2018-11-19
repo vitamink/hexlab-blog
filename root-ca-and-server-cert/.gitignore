@@ -1,0 +1,5 @@
+root-ca.*
+server.*
+serial*
+index.txt*
+issued

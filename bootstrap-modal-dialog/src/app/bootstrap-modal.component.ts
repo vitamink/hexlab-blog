@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'bootstrap-dialog',
   template: `
-    <div class="modal" id="simple-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal" id="{{elementId}}" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -19,7 +19,7 @@ import {Component, Input, OnInit} from '@angular/core';
   `})
 export class BootstrapDialogComponent implements OnInit {
   @Input() title: string;
-  // @Input()
+  @Input('element-id') elementId: string;
 
   ngOnInit(): void {
   }
